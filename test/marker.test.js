@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
 const Marker = require("../src").Marker;
 
-xdescribe("Marker", function () {
+describe("Marker", function () {
   before(function () {
     this.properties = ["medium", "pink", 100];
   });
@@ -68,7 +68,7 @@ xdescribe("Marker", function () {
       marker.remainingInk = 3;
       const actual = marker.write("hi ho hi ho");
 
-      expect(actual).to.equal("hi h  ");
+      expect(actual).to.equal("hi ho ");
       expect(actual.length).to.equal(6);
     });
   });
